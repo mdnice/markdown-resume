@@ -1,0 +1,23 @@
+.hStart {
+  justify-content: flex-start;
+}
+
+.hCenter {
+  justify-content: center;  
+}
+
+.hEnd {
+  justify-content: flex-end;
+}
+
+.vStart {
+  align-items: flex-start;
+}
+
+.vCenter {
+  align-items: center;
+}
+
+.vEnd {
+  align-items: flex-end;
+}
