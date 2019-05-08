@@ -1,6 +1,6 @@
 ## 在线demo
 
-[Markdown简历排版工具](https://mdresume.github.io/)
+[Markdown简历排版工具](https://resume.mdnice.com/)
 
 ## 简历是什么
 
