@@ -61,9 +61,9 @@ class DialogHelp extends Component {
             indicatorColor="primary"
             textColor="primary"
           >
+            <Tab label="注意" />
             <Tab label="使用规则" />
             <Tab label="Markdown语法" />
-            <Tab label="细节" />
           </Tabs>
           {value === 0 && (
             <DialogContentText
@@ -75,7 +75,11 @@ class DialogHelp extends Component {
               dangerouslySetInnerHTML={{ __html: this.md.render(HELP_INFO[1]) }}
             />
           )}
-          {value === 2 && <p>Item Three</p>}
+          {value === 2 && (
+            <DialogContentText
+              dangerouslySetInnerHTML={{ __html: this.md.render(HELP_INFO[2]) }}
+            />
+          )}
         </DialogContent>
         <DialogActions>
           <Button onClick={this.handleClose} color="primary">

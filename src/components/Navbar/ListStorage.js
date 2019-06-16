@@ -2,14 +2,15 @@ import React, { Component } from "react";
 
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
+// import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import Tooltip from "@material-ui/core/Tooltip";
+// import ListItem from "@material-ui/core/ListItem";
+// import Tooltip from "@material-ui/core/Tooltip";
 
-import github from "../../icons/github.svg";
+// import github from "../../icons/github.svg";
+import Export from "../Button/Export"
 
-import { ENTER_DELAY, LEAVE_DELAY } from "../../utils/constant";
+// import { ENTER_DELAY, LEAVE_DELAY } from "../../utils/constant";
 
 import { observer, inject } from "mobx-react";
 
@@ -17,29 +18,25 @@ import { observer, inject } from "mobx-react";
 @inject("navbar")
 @observer
 class ListStorage extends Component {
-  handleSave = () => {};
-
-  handleExport = () => {
-    this.props.navbar.setExported(true);
-    this.setState({ anchorEl: null });
-  };
+  // handleSave = () => {};
 
   render() {
     const { classes } = this.props;
 
     return (
       <List className={classes.list}>
-        <ListItem
+        {/* <ListItem
           className={classes.listExport}
           button
           onClick={this.handleExport}
-        >
-          <Button variant="outlined" color="primary" className={classes.btn}>
+        > */}
+          <Export/>
+          {/* <Button variant="outlined" color="primary" className={classes.btn}>
             导出PDF
-          </Button>
-        </ListItem>
+          </Button> */}
+        {/* </ListItem> */}
 
-        <Tooltip
+        {/* <Tooltip
           title="登录"
           placement="bottom"
           enterDelay={ENTER_DELAY}
@@ -53,7 +50,7 @@ class ListStorage extends Component {
           >
             <img src={github} alt="logo" />
           </ListItem>
-        </Tooltip>
+        </Tooltip> */}
       </List>
     );
   }

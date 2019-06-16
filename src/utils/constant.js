@@ -77,6 +77,10 @@ export const HELP_MARKDOWN = `
 \`\`\`
 `;
 
-export const HELP_INFO = [HELP_USE, HELP_MARKDOWN];
+export const HELP_NOTICE = `
+### 简历数据目前自动保存在浏览器中，如果清理浏览器将会丢失！
+### 记得编辑后保存到本地备份！
+`
+export const HELP_INFO = [HELP_NOTICE, HELP_USE, HELP_MARKDOWN];
 
 export const THEMES = [THEME0, THEME1, THEME2, THEME3, THEME4];

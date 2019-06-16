@@ -34,6 +34,14 @@ class App extends Component {
         this.props.navbar.setBtnDisable(true);
       }
     };
+
+    window.onbeforeunload = e => {
+      e = e || window.event;
+      if (e) {
+        e.returnValue = "数据目前存储在浏览器中，记得保存到本地备份！";
+      }
+      return "数据目前存储在浏览器中，记得保存到本地备份！";
+    };
   }
 
   componentDidUpdate() {
