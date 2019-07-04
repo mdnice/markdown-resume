@@ -4,10 +4,10 @@ import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 // import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
-// import ListItem from "@material-ui/core/ListItem";
+import ListItem from "@material-ui/core/ListItem";
 // import Tooltip from "@material-ui/core/Tooltip";
 
-// import github from "../../icons/github.svg";
+import github from "../../icons/github.svg";
 import Export from "../Button/Export"
 
 // import { ENTER_DELAY, LEAVE_DELAY } from "../../utils/constant";
@@ -42,15 +42,17 @@ class ListStorage extends Component {
           enterDelay={ENTER_DELAY}
           leaveDelay={LEAVE_DELAY}
           disableFocusListener
-        >
+        > */}
           <ListItem
             className={classes.listItem}
             button
             onClick={this.handleSave}
           >
-            <img src={github} alt="logo" />
+            <a className={classes.github} target="_blank" rel="noopener noreferrer" href="https://github.com/guanpengchn/markdown-resume">
+              <img src={github} alt="logo" />
+            </a>
           </ListItem>
-        </Tooltip> */}
+        {/* </Tooltip> */}
       </List>
     );
   }
@@ -77,6 +79,9 @@ const styles = theme => ({
   btn: {
     padding: "0",
     width: "100px",
+  },
+  github: {
+    borderBottom: "none"
   }
 });
 
