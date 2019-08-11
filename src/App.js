@@ -92,7 +92,8 @@ const styles = theme => ({
     width: contentWidth + "mm",
     height: contentHeight + "mm",
     background: "white",
-    overflow: "auto"
+    overflow: "auto",
+    wordBreak: "break-all"
   },
   navbar: {
     width: "100%",

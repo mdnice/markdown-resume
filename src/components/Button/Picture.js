@@ -4,30 +4,61 @@ import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Tooltip from "@material-ui/core/Tooltip";
 import Button from "@material-ui/core/Button";
+import axios from "axios";
 
 import picture from "../../icons/picture.svg";
 
-import { ENTER_DELAY, LEAVE_DELAY, DATA_MARKDOWN } from "../../utils/constant";
+import {
+  ENTER_DELAY,
+  LEAVE_DELAY,
+  DATA_MARKDOWN,
+  DATA_ORIGIN,
+  SM_MS_PROXY
+} from "../../utils/constant";
 
 import { observer, inject } from "mobx-react";
 
 @inject("navbar")
 @inject("resume")
+@inject("hint")
 @observer
 class Picture extends Component {
   /**
-   * 更新markdown样式
+   * 上传图片
    */
-  updateStyle = flag => event => {
-    event.stopPropagation();
-    const id = this.props.resume.choosenKey;
-    const element = document.getElementById(id);
-    let content = element.getAttribute(DATA_MARKDOWN);
-    content = "- " + content;
+  uploadPicture = async ({ target }) => {
+    const file = document.getElementById("uploadImage");
+    const formData = new FormData();
+    formData.append("smfile", file.files[0]);
 
-    // 更新markdown内容
-    element.childNodes[0].innerText = content;
-    element.setAttribute(DATA_MARKDOWN, content);
+    const result = await axios.post(SM_MS_PROXY, formData);
+    if (result.data.message === "Image upload repeated limit.") {
+      this.props.hint.setError({
+        isOpen: true,
+        message: "同一张图片无法上传多次"
+      });
+    } else {
+      const id = this.props.resume.choosenKey;
+      console.log(id);
+      const element = document.getElementById(id);
+
+      const { isMarkdownMode } = this.props.navbar;
+      let content;
+      if (isMarkdownMode) {
+        content = `![avatar](${result.data.data.url})`;
+        element.childNodes[0].innerText = content;
+        element.setAttribute(DATA_MARKDOWN, content);
+      } else {
+        content = `<section><p><img src="${result.data.data.url}" alt="avatar"></p>\n</section>`
+        element.childNodes[0].innerHTML = content;
+        element.setAttribute(DATA_ORIGIN, content);
+      }
+     
+    }
+  };
+
+  stopPropagation = event => {
+    event.stopPropagation();
   };
 
   render() {
@@ -44,6 +75,7 @@ class Picture extends Component {
         <Button
           className={classes.btn}
           disabled={this.props.navbar.isDisabled}
+          onClick={this.stopPropagation}
           classes={{
             root: classes.minWidth,
             disabled: classes.opacity
@@ -52,11 +84,11 @@ class Picture extends Component {
           <input
             accept="image/*"
             className={classes.input}
-            id="contained-button-file"
-            multiple
+            id="uploadImage"
+            onChange={this.uploadPicture}
             type="file"
           />
-          <label htmlFor="contained-button-file" className={classes.label}>
+          <label htmlFor="uploadImage" className={classes.label}>
             <img src={picture} alt="logo" />
           </label>
         </Button>
@@ -67,14 +99,16 @@ class Picture extends Component {
 
 const styles = theme => ({
   input: {
-    display: "none"
+    display: "none",
+    width: "100%"
   },
   label: {
     display: "flex",
-    height: "100%"
+    height: "100%",
+    padding: "6px 10px"
   },
   btn: {
-    padding: "6px 10px",
+    padding: "0px",
     borderRadius: "0",
     borderBottom: "1px solid #cccccc",
     borderTop: "1px solid #cccccc",
