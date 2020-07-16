@@ -2,6 +2,8 @@
 
 [Markdown简历排版工具](https://resume.mdnice.com/)
 
+目前仅支持 Chrome 浏览器，开发者最近在忙另一个项目，可能照顾不周望谅解
+
 ## TODO
 
 - 图床和模板存储
