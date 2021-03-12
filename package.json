@@ -52,7 +52,7 @@
     "react": "^16.8.3",
     "react-app-polyfill": "^0.2.1",
     "react-color": "^2.17.0",
-    "react-dev-utils": "^7.0.3",
+    "react-dev-utils": "^11.0.4",
     "react-dom": "^16.8.3",
     "react-grid-layout": "^0.16.6",
     "resolve": "1.10.0",
