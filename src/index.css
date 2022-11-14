@@ -1,9 +1,10 @@
 body {
   margin: 0;
   padding: 0 !important;
-  font-family: "Times New Roman", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+/*   font-family: "Times New Roman", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    sans-serif; */
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, "宋体";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #cccccc;
@@ -11,9 +12,10 @@ body {
 }
 
 code {
-  font-family: "Times New Roman", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+/*   font-family: "Times New Roman", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    sans-serif; */
+  font-family: "Microsoft YaHei", Arial,Helvetica, sans-serif, "宋体";
 }
 
 /* 滚动槽 */
