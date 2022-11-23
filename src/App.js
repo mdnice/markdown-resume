@@ -78,7 +78,7 @@ class App extends Component {
 }
 
 const contentWidth = 210 - 11 * 2;
-const contentHeight = 296 - 16 * 2;
+const contentHeight = 296 * 2 - 16 * 2;
 
 const styles = theme => ({
   app: {
