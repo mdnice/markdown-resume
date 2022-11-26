@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0 !important;
-    font-family: 'Ubuntu', 'Noto Serif SC', sans-serif, serif;
+    font-family: 'Ubuntu', 'Noto Serif SC';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: #cccccc;
