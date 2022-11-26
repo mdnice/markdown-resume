@@ -11,7 +11,7 @@ import hint from "./store/hint";
 import dialog from "./store/dialog";
 
 import { Provider } from "mobx-react";
-
+import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 
 const theme = createMuiTheme({
