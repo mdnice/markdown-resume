@@ -2,8 +2,7 @@
 body {
     margin: 0;
     padding: 0 !important;
-    font-family: 'EB Garamond', serif;
-    font-family: 'Noto Serif SC', serif;
+    font-family: 'EB Garamond', 'Noto Serif SC', serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: #cccccc;
