@@ -60,7 +60,7 @@ class App extends Component {
     const resumeStyle = {
       border: isExported ? "none" : "1px solid black",
       boxShadow: isExported ? "none" : "0px 0px 4px",
-      margin: isExported ? "0px" : "80px 0"
+      margin: isExported ? "0px" : "0px 0"
     };
     return (
       <div id="app" className={classes.app}>
