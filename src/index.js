@@ -11,7 +11,6 @@ import hint from "./store/hint";
 import dialog from "./store/dialog";
 
 import { Provider } from "mobx-react";
-
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 
 const theme = createMuiTheme({
