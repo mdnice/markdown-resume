@@ -164,6 +164,18 @@ class Resume extends Component {
     }`;
     document.styleSheets[0].rules[9].style.color = this.props.navbar.themeColor;
 
+    // 设置字体大小
+    // a
+    document.styleSheets[0].cssRules[9].style.fontSize = `${this.props.navbar.fontSize}px`;
+    // section
+    document.styleSheets[0].cssRules[10].style.fontSize = `${this.props.navbar.fontSize}px`;
+    // h1
+    document.styleSheets[0].cssRules[11].style.fontSize = `${this.props.navbar.fontSize * 2 - 2}px`;
+    // h2
+    document.styleSheets[0].cssRules[12].style.fontSize = `${this.props.navbar.fontSize + 1}px`;
+    // p
+    document.styleSheets[0].cssRules[13].style.fontSize = `${this.props.navbar.fontSize}px`;
+
     return (
       <GridLayout
         className={classes.layout}
@@ -232,27 +244,22 @@ const styles = theme => ({
       "& section": {
         height: "100%",
         display: "flex",
-        fontSize: "3.8mm",
         lineHeight: "24px",
         overflow: "hidden",
         width: "100%"
       },
       "& h1": {
         margin: "0",
-        fontSize: "7mm"
       },
       "& h2": {
         margin: "0",
-        fontSize: "4mm",
         fontWeight: "bold"
       },
       "& p": {
-        fontSize: "3.8mm",
         margin: "0",
         lineHeight: "24px"
       },
       "& a": {
-        fontSize: "3.8mm",
         textDecoration: "none",
         fontWeight: "bold"
         // borderBottom: "1px solid black"

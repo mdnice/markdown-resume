@@ -4,6 +4,7 @@ import { TEMPLATE_NUM, MARKDOWN_MODE } from "../utils/constant";
 class Navbar {
   @observable isDisabled = true;
   @observable themeColor = "#468CD4";
+  @observable fontSize = 14;
   @observable isExported = false;
   @observable isMarkdownMode = false;
   @observable templateNum = 1;
@@ -17,6 +18,11 @@ class Navbar {
   setThemeColor = themeColor => {
     this.themeColor = themeColor;
   };
+
+  @action
+  setFontSize = fontSize => {
+    this.fontSize = fontSize;
+  }
 
   @action
   setExported = isExported => {
