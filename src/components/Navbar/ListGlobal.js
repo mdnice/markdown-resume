@@ -9,6 +9,7 @@ import Frame from "../Button/Frame";
 import Color from "../Button/Color";
 import Screen from "../Button/Screen";
 import AddGrid from "../Button/AddGrid";
+import ChangeFontsize from "../Button/ChangeFontsize";
 import Help from "../Button/Help";
 
 class ListGlobal extends Component {
@@ -22,6 +23,7 @@ class ListGlobal extends Component {
         <Color />
         <Screen />
         <AddGrid />
+        <ChangeFontsize />
         <Help />
       </List>
     );
