@@ -7,7 +7,7 @@ import Button from "@material-ui/core/Button";
 import Cheerio from "cheerio";
 import underline from "../../icons/underline.svg";
 
-import { ENTER_DELAY, LEAVE_DELAY, DATA_MARKDOWN,DATA_ORIGIN } from "../../utils/constant";
+import { ENTER_DELAY, LEAVE_DELAY, DATA_MARKDOWN, DATA_ORIGIN } from "../../utils/constant";
 
 import { observer, inject } from "mobx-react";
 
@@ -69,17 +69,19 @@ class Blockquote extends Component {
         leaveDelay={LEAVE_DELAY}
         disableFocusListener
       >
-        <Button
-          disabled={this.props.navbar.isDisabled}
-          onClick={this.updateStyle}
-          className={classes.btn}
-          classes={{
-            root: classes.minWidth,
-            disabled: classes.opacity
-          }}
-        >
-          <img src={underline} alt="logo" />
-        </Button>
+        <span>
+          <Button
+            disabled={this.props.navbar.isDisabled}
+            onClick={this.updateStyle}
+            className={classes.btn}
+            classes={{
+              root: classes.minWidth,
+              disabled: classes.opacity
+            }}
+          >
+            <img src={underline} alt="logo" />
+          </Button>
+        </span>
       </Tooltip>
     );
   }

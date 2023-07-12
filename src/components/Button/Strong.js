@@ -96,6 +96,7 @@ class Strong extends Component {
           leaveDelay={LEAVE_DELAY}
           disableFocusListener
         >
+          <span>
           <Button
             disabled={this.props.navbar.isDisabled}
             onClick={this.updateStyle}
@@ -107,6 +108,7 @@ class Strong extends Component {
           >
             <img src={bold} alt="logo" />
           </Button>
+          </span>
         </Tooltip>
       </div>
     );

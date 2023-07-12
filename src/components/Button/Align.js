@@ -10,7 +10,7 @@ import Cheerio from "cheerio";
 import align from "../../icons/align.svg";
 import corner from "../../icons/corner.svg";
 
-import { ENTER_DELAY, LEAVE_DELAY, DATA_MARKDOWN,DATA_ORIGIN } from "../../utils/constant";
+import { ENTER_DELAY, LEAVE_DELAY, DATA_MARKDOWN, DATA_ORIGIN } from "../../utils/constant";
 
 import { observer, inject } from "mobx-react";
 
@@ -139,18 +139,20 @@ class Word extends Component {
           leaveDelay={LEAVE_DELAY}
           disableFocusListener
         >
-          <Button
-            disabled={this.props.navbar.isDisabled}
-            onClick={this.openAlignMenu}
-            className={classes.btn}
-            classes={{
-              root: classes.minWidth,
-              disabled: classes.opacity
-            }}
-          >
-            <img src={align} alt="logo" />
-            <img src={corner} alt="logo" className={classes.corner} />
-          </Button>
+          <span>
+            <Button
+              disabled={this.props.navbar.isDisabled}
+              onClick={this.openAlignMenu}
+              className={classes.btn}
+              classes={{
+                root: classes.minWidth,
+                disabled: classes.opacity
+              }}
+            >
+              <img src={align} alt="logo" />
+              <img src={corner} alt="logo" className={classes.corner} />
+            </Button>
+          </span>
         </Tooltip>
       </div>
     );

@@ -94,17 +94,19 @@ class Bucket extends Component {
         enterDelay={ENTER_DELAY}
         leaveDelay={LEAVE_DELAY}
       >
-        <Button
-          disabled={this.props.navbar.isDisabled}
-          onClick={this.updateStyle}
-          className={classes.btn}
-          classes={{
-            root: classes.minWidth,
-            disabled: classes.opacity
-          }}
-        >
-          <img src={bucket} alt="logo" />
-        </Button>
+        <span>
+          <Button
+            disabled={this.props.navbar.isDisabled}
+            onClick={this.updateStyle}
+            className={classes.btn}
+            classes={{
+              root: classes.minWidth,
+              disabled: classes.opacity
+            }}
+          >
+            <img src={bucket} alt="logo" />
+          </Button>
+        </span>
       </Tooltip>
     );
   }

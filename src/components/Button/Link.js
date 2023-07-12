@@ -69,17 +69,19 @@ class Link extends Component {
         leaveDelay={LEAVE_DELAY}
         disableFocusListener
       >
-        <Button
-          disabled={this.props.navbar.isDisabled}
-          onClick={this.updateStyle}
-          className={classes.btn}
-          classes={{
-            root: classes.minWidth,
-            disabled: classes.opacity
-          }}
-        >
-          <img src={link} alt="logo" />
-        </Button>
+        <span>
+          <Button
+            disabled={this.props.navbar.isDisabled}
+            onClick={this.updateStyle}
+            className={classes.btn}
+            classes={{
+              root: classes.minWidth,
+              disabled: classes.opacity
+            }}
+          >
+            <img src={link} alt="logo" />
+          </Button>
+        </span>
       </Tooltip>
     );
   }

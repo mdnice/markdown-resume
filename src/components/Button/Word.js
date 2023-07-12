@@ -141,18 +141,20 @@ class Word extends Component {
           leaveDelay={LEAVE_DELAY}
           disableFocusListener
         >
-          <Button
-            disabled={this.props.navbar.isDisabled}
-            onClick={this.openFontSizeMenu}
-            className={classes.leftBtn}
-            classes={{
-              root: classes.minWidth,
-              disabled: classes.opacity
-            }}
-          >
-            <img src={word} alt="logo" />
-            <img src={corner} alt="logo" className={classes.corner} />
-          </Button>
+          <span>
+            <Button
+              disabled={this.props.navbar.isDisabled}
+              onClick={this.openFontSizeMenu}
+              className={classes.leftBtn}
+              classes={{
+                root: classes.minWidth,
+                disabled: classes.opacity
+              }}
+            >
+              <img src={word} alt="logo" />
+              <img src={corner} alt="logo" className={classes.corner} />
+            </Button>
+          </span>
         </Tooltip>
       </div>
     );

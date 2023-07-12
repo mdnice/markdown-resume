@@ -31,17 +31,19 @@ class RemoveGrid extends Component {
         leaveDelay={LEAVE_DELAY}
         disableFocusListener
       >
-        <Button
-          className={classes.rightBtn}
-          disabled={this.props.navbar.isDisabled}
-          classes={{
-            root: classes.minWidth,
-            disabled: classes.opacity
-          }}
-          onClick={this.removeGrid}
-        >
-          <img src={remove} alt="logo" />
-        </Button>
+        <span>
+          <Button
+            className={classes.rightBtn}
+            disabled={this.props.navbar.isDisabled}
+            classes={{
+              root: classes.minWidth,
+              disabled: classes.opacity
+            }}
+            onClick={this.removeGrid}
+          >
+            <img src={remove} alt="logo" />
+          </Button>
+        </span>
       </Tooltip>
     );
   }

@@ -8,7 +8,7 @@ import Cheerio from "cheerio";
 
 import list from "../../icons/list.svg";
 
-import { ENTER_DELAY, LEAVE_DELAY, DATA_MARKDOWN,DATA_ORIGIN } from "../../utils/constant";
+import { ENTER_DELAY, LEAVE_DELAY, DATA_MARKDOWN, DATA_ORIGIN } from "../../utils/constant";
 
 import { observer, inject } from "mobx-react";
 
@@ -70,17 +70,19 @@ class Li extends Component {
         leaveDelay={LEAVE_DELAY}
         disableFocusListener
       >
-        <Button
-          disabled={this.props.navbar.isDisabled}
-          onClick={this.updateStyle}
-          className={classes.btn}
-          classes={{
-            root: classes.minWidth,
-            disabled: classes.opacity
-          }}
-        >
-          <img src={list} alt="logo" />
-        </Button>
+        <span>
+          <Button
+            disabled={this.props.navbar.isDisabled}
+            onClick={this.updateStyle}
+            className={classes.btn}
+            classes={{
+              root: classes.minWidth,
+              disabled: classes.opacity
+            }}
+          >
+            <img src={list} alt="logo" />
+          </Button>
+        </span>
       </Tooltip>
     );
   }

@@ -53,7 +53,7 @@ class Picture extends Component {
         element.childNodes[0].innerHTML = content;
         element.setAttribute(DATA_ORIGIN, content);
       }
-     
+
     }
   };
 
@@ -72,26 +72,28 @@ class Picture extends Component {
         leaveDelay={LEAVE_DELAY}
         disableFocusListener
       >
-        <Button
-          className={classes.btn}
-          disabled={this.props.navbar.isDisabled}
-          onClick={this.stopPropagation}
-          classes={{
-            root: classes.minWidth,
-            disabled: classes.opacity
-          }}
-        >
-          <input
-            accept="image/*"
-            className={classes.input}
-            id="uploadImage"
-            onChange={this.uploadPicture}
-            type="file"
-          />
-          <label htmlFor="uploadImage" className={classes.label}>
-            <img src={picture} alt="logo" />
-          </label>
-        </Button>
+        <span>
+          <Button
+            className={classes.btn}
+            disabled={this.props.navbar.isDisabled}
+            onClick={this.stopPropagation}
+            classes={{
+              root: classes.minWidth,
+              disabled: classes.opacity
+            }}
+          >
+            <input
+              accept="image/*"
+              className={classes.input}
+              id="uploadImage"
+              onChange={this.uploadPicture}
+              type="file"
+            />
+            <label htmlFor="uploadImage" className={classes.label}>
+              <img src={picture} alt="logo" />
+            </label>
+          </Button>
+        </span>
       </Tooltip>
     );
   }

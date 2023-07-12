@@ -178,18 +178,20 @@ class Line extends Component {
           open={this.state.open}
           disableFocusListener
         >
-          <Button
-            disabled={this.props.navbar.isDisabled}
-            onClick={this.openLineMenu}
-            className={classes.btn}
-            classes={{
-              root: classes.minWidth,
-              disabled: classes.opacity
-            }}
-          >
-            <img src={line} alt="logo" />
-            <img src={corner} alt="logo" className={classes.corner} />
-          </Button>
+          <span>
+            <Button
+              disabled={this.props.navbar.isDisabled}
+              onClick={this.openLineMenu}
+              className={classes.btn}
+              classes={{
+                root: classes.minWidth,
+                disabled: classes.opacity
+              }}
+            >
+              <img src={line} alt="logo" />
+              <img src={corner} alt="logo" className={classes.corner} />
+            </Button>
+          </span>
         </Tooltip>
       </div>
     );
