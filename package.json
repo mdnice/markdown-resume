@@ -20,6 +20,7 @@
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "cheerio": "^1.0.0-rc.2",
+    "cross-env": "^7.0.3",
     "css-loader": "1.0.0",
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",
@@ -69,7 +70,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider node scripts/build.js",
     "deploy": "./deploy.sh",
     "test": "node scripts/test.js"
   },
