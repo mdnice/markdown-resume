@@ -69,7 +69,7 @@
     "workbox-webpack-plugin": "3.6.3"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider node scripts/start.js",
     "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider node scripts/build.js",
     "deploy": "./deploy.sh",
     "test": "node scripts/test.js"

@@ -10,9 +10,9 @@ const LAYOUT = [
     moved: false,
     static: false,
     value:
-      "![avatar](https://github.com/guanpengchn/Figure/raw/master/resume-avatar-1.jpg)",
+      "![avatar](http://124.223.90.239:8000/static/b38ec095b6d6a12fc827d2602)",
     origin:
-      '<section><p><img src="https://github.com/guanpengchn/Figure/raw/master/resume-avatar-1.jpg" alt="avatar"></p>\n</section>'
+      '<section><p><img style="border-radius: 4px" src="http://124.223.90.239:8000/static/b38ec095b6d6a12fc827d2602" alt="avatar"></p>\n</section>'
   },
   {
     w: 19,

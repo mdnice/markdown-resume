@@ -31,7 +31,8 @@ class Picture extends Component {
     const formData = new FormData();
     formData.append("smfile", file.files[0]);
 
-    const result = await axios.post(SM_MS_PROXY, formData);
+    const result = await axios.post('http://124.223.90.239:8000/api/file/upload', formData);
+    console.log(result.data.data.url)
     if (result.data.message === "Image upload repeated limit.") {
       this.props.hint.setError({
         isOpen: true,
@@ -41,7 +42,6 @@ class Picture extends Component {
       const id = this.props.resume.choosenKey;
       console.log(id);
       const element = document.getElementById(id);
-
       const { isMarkdownMode } = this.props.navbar;
       let content;
       if (isMarkdownMode) {
@@ -49,7 +49,7 @@ class Picture extends Component {
         element.childNodes[0].innerText = content;
         element.setAttribute(DATA_MARKDOWN, content);
       } else {
-        content = `<section><p><img src="${result.data.data.url}" alt="avatar"></p>\n</section>`
+        content = `<section><p><img src="${result.data.data.url}" style="border-radius: 4px;" alt="avatar"></p>\n</section>`
         element.childNodes[0].innerHTML = content;
         element.setAttribute(DATA_ORIGIN, content);
       }
