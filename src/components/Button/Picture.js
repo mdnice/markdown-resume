@@ -31,7 +31,7 @@ class Picture extends Component {
     const formData = new FormData();
     formData.append("smfile", file.files[0]);
 
-    const result = await axios.post('http://124.223.90.239:8000/api/file/upload', formData);
+    const result = await axios.post(SM_MS_PROXY, formData);
     console.log(result.data.data.url)
     if (result.data.message === "Image upload repeated limit.") {
       this.props.hint.setError({

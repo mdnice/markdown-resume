@@ -25,7 +25,7 @@ export const TEMPLATE_NUM = "templateNum";
 export const MARKDOWN_MODE = "markdownMode";
 
 export const SM_MS_PROXY =
-  "https://cors-anywhere.herokuapp.com/https://sm.ms/api/upload";
+  "http://124.223.90.239:8000/api/file/upload";
 
 // 帮助信息
 export const HELP_USE = `
